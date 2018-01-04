@@ -1,0 +1,148 @@
+1. Write a C program to accept two integers and check whether they are equal or not. 
+
+#include<stdio.h>
+
+
+int main()
+ {
+  
+   int x=15;
+ 
+   int y=15;
+  
+   if (x==y)
+ 
+   printf("%d and %d are equal", x,y);
+   else
+   printf("%d and %d are not equal", x,y); 
+ 
+}
+
+
+==============================================================================================================
+
+2.Write a C program to check whether a given number is positive or negative. 
+
+#include<stdio.h>
+
+
+int main()
+ {
+  
+   int x=15;
+ 
+  
+   if (x>0) 
+   printf("%d is a positive number, x);
+   else
+   printf("%d is not positive number", x); 
+ 
+}
+
+
+===============================================================================================================
+
+3.Write a C program to check whether a triangle is Equilateral, Isosceles or Scalene. 
+
+#include<stdio.h>
+
+
+int main()
+ {
+  
+   int x=50;
+ 
+   int y=50;
+
+   int z=60;   
+   if ((x==y) && (y==z))
+ 
+   printf("This is Equilateral traingle.");
+   else if (((x==y) && (y!=z)) || ((x==z) && (y!=z)) || ((z==y) && (x!=z))) 
+   printf("This is Isosceles traingle.");
+   else
+   printf("This is Scalene traingle.");  
+ 
+}
+
+
+================================================================================================================
+
+4. Write a C program to check whether a character is an alphabet, digit or special character. 
+
+#include <stdio.h>
+
+
+int main()
+
+ { 
+   
+  char c='@';
+  if((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+     
+  printf("This is an alphabet.", c);
+    
+  else if(c >= '0' && c <= '9')
+     
+  printf("This is a digit.", c);
+   
+  else 
+    
+  printf("This is a special character.", c);
+
+ }
+
+
+================================================================================================================
+
+5. Write a program in C to calculate and print the Electricity bill of a given customer. The customer id.,
+ name and unit consumed by the user should be taken from the keyboard and display the total amount to pay 
+ to the customer. The charge are as follow : Go to the editor
+
+Unit	                         Charge/unit
+upto 199	                      @1.20
+200 and above but less than 400	@1.50
+400 and above but less than 600	@1.80
+600 and above	@2.00
+If bill exceeds Rs. 400 then a surcharge of 15% will be charged and the minimum bill should be of Rs. 100/-
+
+#include <stdio.h>
+
+
+int main()
+
+ {
+   
+  int cid,unit;
+  char cname[10]; 
+  float chg,surchg=0,gramt,netamt;
+  printf("Customer IDNO :");
+  scanf("%d",&cid);
+  printf("Customer Name :");
+  scanf("%s",cname);
+  printf("Unit Consumed :");
+  scanf("%d",&unit);
+  if (unit < 200 )
+	chg = 1.20;
+  else if (unit >= 200 && unit < 400)
+	chg = 1.50;
+  else if (unit >= 400 && unit < 600)
+	chg = 1.80;
+  else
+	chg = 2.00;
+        gramt = conu*chg;
+        if (gramt > 300)
+	surchg = gramt*15/100.0;
+   netamt = gramt+surchg;
+   if (netamt < 100)
+	netamt =100;
+   printf("\nElectricity Bill\n");
+   printf("Customer IDNO :%d\n",cid);
+   printf("Customer Name :%s\n",cname);
+   printf("unit Consumed :%d\n",unit);
+   printf("Amount Charges @Rs. %4.2f  per unit : %8.2f\n",chg,gramt);
+   printf("Surchage Amount : %8.2f\n",surchg);
+   printf("Net Amount Paid By the Customer : %8.2f\n",netamt);
+ }  
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
